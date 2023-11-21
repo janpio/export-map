@@ -1,4 +1,4 @@
-# Demo Folder
+# Demo: Folder
 
 ## Setup
 

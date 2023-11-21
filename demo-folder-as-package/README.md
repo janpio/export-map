@@ -1,8 +1,8 @@
-# Demo Folder as Package
+# Demo: Folder as Package
 
 ## Setup
 
-- Reference to folder as dependency `package.json`
+- Reference to folder as dependency in `package.json`
 - Import with package name `janpio-exports-map-example` in function
 
 ## Commands

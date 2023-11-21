@@ -1,8 +1,8 @@
-# Demo Package
+# Demo: Package
 
 ## Setup
 
-- Reference to package as dependency `package.json` (so it is installed on `npm install`)
+- Reference to package as dependency in `package.json` (so it is installed on `npm install`)
 - Import with package name `janpio-exports-map-example` in function
 
 ## Commands
