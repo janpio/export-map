@@ -1,4 +1,4 @@
-# Challenges unifying Prisma Client imports via conditional exports
+# Conditional exports demos
 
 Folders:
 - `/package` - Simple isomorphic package with one entrypoint for node, and one for workerd
