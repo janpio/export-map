@@ -19,5 +19,5 @@ X [ERROR] Could not resolve "../../package"
 
     src/index.js:1:33:
       1 │ import { randomCharacters } from "../../package";
-        ╵                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        ╵                                  ~~~~~~~~~~~~~~~
 ```
