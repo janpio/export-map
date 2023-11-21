@@ -1,0 +1,9 @@
+{
+	"name": "janpio-exports-map-example",
+	"version": "0.0.3",
+	"description": "Isomorphic secure-random library, demonstrating `exports` use with Workers",
+	"exports": {
+		"node": "./src/node.js",
+		"workerd": "./src/workerd.mjs"
+	}
+}
