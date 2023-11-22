@@ -23,7 +23,7 @@ __export(src_exports, {
 });
 module.exports = __toCommonJS(src_exports);
 
-// ../package/src/node.js
+// ../package/src/main.js
 function randomCharacters(length) {
   const longString = `9254835974458887629672873635789957411886024698554157393849494864228024962939550688297074527198420261051675205999609689838587412
 7948702662533481896767559573369920938242346354580061545409242090168773727371802699309443935396635866263937828773324526334321892
@@ -8219,7 +8219,7 @@ function randomCharacters(length) {
 9634367858634565656906133482371306765239555613722480562207025106068336976469898723556668691361827599343403798798405762012284113`;
   const randomIndex = Math.floor(Math.random() * (longString.length - length));
   const randomChars = longString.substr(randomIndex, length);
-  return "This is from node.mjs:" + randomChars;
+  return "This is from main.js:" + randomChars;
 }
 
 // src/index.js
