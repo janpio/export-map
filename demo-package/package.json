@@ -5,8 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-node": "npx esbuild src/index.js --bundle --platform=node --target=node18 --outfile=dist-node/index.js --format=cjs",
-    "build-cloudflare": "npx wrangler build"
+    "build-node-esbuild": "npx esbuild src/index.js --bundle --platform=node --target=node18 --outfile=dist-node-esbuild/index.js --format=cjs",
+    "build-cloudflare": "npx wrangler build",
+    "build-node-webpack": "npx webpack -c webpack.node.config.js",
+    "build-worker-webpack": "npx webpack -c webpack.worker.config.js",
+    "build-node-rollup": "npx rollup -c rollup.node.config.js",
+    "build-worker-rollup": "npx rollup -c rollup.worker.config.js",
+    "build-all": "npm run build-node-esbuild && npm run build-cloudflare && npm run build-node-webpack && npm run build-worker-webpack && npm run build-node-rollup && npm run build-worker-rollup"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +21,11 @@
   },
   "devDependencies": {
     "esbuild": "^0.19.7",
-    "wrangler": "^3.15.0"
+    "wrangler": "^3.15.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "rollup": "^4.5.1"
   }
 }
