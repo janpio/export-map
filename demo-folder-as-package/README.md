@@ -15,7 +15,6 @@ npm run build-node-rollup
 npm run build-worker-rollup
 ```
 
-
 ## Result
 
 - Build succeeds, and includes only content of `workerd.mjs` ✅ in bundle for `*-worker-*` and `*-cloudflare` builds
