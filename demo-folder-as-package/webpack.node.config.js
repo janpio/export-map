@@ -3,7 +3,7 @@ module.exports = {
   target: 'node',
   output: {
     filename: 'index.js',
-    path: __dirname + '/dist-node'
+    path: __dirname + '/dist-node-webpack'
   },
   optimization: {
     usedExports: false,

@@ -7,17 +7,12 @@
 
 ## Commands
 ```
-npm run build-node
+npm run build-node-esbuild
 npm run build-cloudflare
+npm run build-node-webpack
+npm run build-worker-webpack
 ```
 
 ## Result
 
-- Build fails as import can not be resolved:
-```
-X [ERROR] Could not resolve "../../package"
-
-    src/index.js:1:33:
-      1 │ import { randomCharacters } from "../../package";
-        ╵                                  ~~~~~~~~~~~~~~~
-```
+- Build succeeds, and includes only content of `node.js` in bundle

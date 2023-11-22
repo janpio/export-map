@@ -7,8 +7,10 @@
 
 ## Commands
 ```
-npm run build-node
+npm run build-node-esbuild
 npm run build-cloudflare
+npm run build-node-webpack
+npm run build-worker-webpack
 ```
 
 

@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-node": "npx esbuild src/index.js --bundle --platform=node --target=node18 --outfile=dist-node/index.js --format=cjs",
-    "build-cloudflare": "npx wrangler build"
+    "build-node-esbuild": "npx esbuild src/index.js --bundle --platform=node --target=node18 --outfile=dist-node-esbuild/index.js --format=cjs",
+    "build-cloudflare": "npx wrangler build",
+    "build-node-webpack": "npx webpack -c webpack.node.config.js",
+    "build-worker-webpack": "npx webpack -c webpack.worker.config.js"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +18,8 @@
   },
   "devDependencies": {
     "esbuild": "^0.19.7",
-    "wrangler": "^3.15.0"
+    "wrangler": "^3.15.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
   }
 }

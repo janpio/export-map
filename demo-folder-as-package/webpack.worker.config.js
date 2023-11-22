@@ -3,7 +3,7 @@ module.exports = {
   target: 'webworker',
   output: {
     filename: 'index.js',
-    path: __dirname + '/dist'
+    path: __dirname + '/dist-worker-webpack'
   },
   optimization: {
     usedExports: false,
