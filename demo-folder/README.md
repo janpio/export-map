@@ -7,17 +7,17 @@
 
 ## Commands
 ```
-npm run build-node
+npm run build-node-esbuild
 npm run build-cloudflare
+npm run build-node-webpack
+npm run build-worker-webpack
+npm run build-node-rollup
+npm run build-worker-rollup
 ```
 
 ## Result
 
-- Build fails as import can not be resolved:
-```
-X [ERROR] Could not resolve "../../package"
+- Build succeeds, but includes content of `main.js` 🔴 in bundle for `*-worker-*` and `*-cloudflare` builds
+- Build succeeds, but includes content of `main.js` ✅ in bundle for `*-node-*` builds
 
-    src/index.js:1:33:
-      1 │ import { randomCharacters } from "../../package";
-        ╵                                  ~~~~~~~~~~~~~~~
-```
+(Without `main` entry in `package.json` it would fail and not find the package)

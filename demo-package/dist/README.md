@@ -1,1 +1,1 @@
-This folder contains the built output assets for the worker "worker-app" generated at 2023-11-21T23:02:19.211Z.
+This folder contains the built output assets for the worker "worker-app" generated at 2023-11-22T18:31:52.417Z.

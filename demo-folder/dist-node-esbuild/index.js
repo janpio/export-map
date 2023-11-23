@@ -1,6 +1,31 @@
-// ../package/src/workerd.mjs
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropNames = Object.getOwnPropertyNames;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+  }
+  return to;
+};
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+
+// src/index.js
+var src_exports = {};
+__export(src_exports, {
+  default: () => src_default
+});
+module.exports = __toCommonJS(src_exports);
+
+// ../package/src/main.js
 function randomCharacters(length) {
-  const msg = "This is from workerd.mjs: ";
+  const msg = "This is from main.js: ";
   const longString = `9254835974458887629672873635789957411886024698554157393849494864228024962939550688297074527198420261051675205999609689838587412
 7948702662533481896767559573369920938242346354580061545409242090168773727371802699309443935396635866263937828773324526334321892
 7929250312741837331511829643632683169694074912332726993582394725302853411901337696207186358524323117172520907433878952968176465
@@ -8207,7 +8232,3 @@ var src_default = {
     return new Response(`${result}`);
   }
 };
-export {
-  src_default as default
-};
-//# sourceMappingURL=index.js.map
