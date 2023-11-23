@@ -1,31 +1,6 @@
-var __defProp = Object.defineProperty;
-var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-var __getOwnPropNames = Object.getOwnPropertyNames;
-var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __export = (target, all) => {
-  for (var name in all)
-    __defProp(target, name, { get: all[name], enumerable: true });
-};
-var __copyProps = (to, from, except, desc) => {
-  if (from && typeof from === "object" || typeof from === "function") {
-    for (let key of __getOwnPropNames(from))
-      if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
-  }
-  return to;
-};
-var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
-
-// src/index.js
-var src_exports = {};
-__export(src_exports, {
-  default: () => src_default
-});
-module.exports = __toCommonJS(src_exports);
-
-// node_modules/janpio-exports-map-example/src/node.js
 function randomCharacters(length) {
-  const longString = `9254835974458887629672873635789957411886024698554157393849494864228024962939550688297074527198420261051675205999609689838587412
+	const msg = "This is from node.js: ";
+	const longString = `9254835974458887629672873635789957411886024698554157393849494864228024962939550688297074527198420261051675205999609689838587412
 7948702662533481896767559573369920938242346354580061545409242090168773727371802699309443935396635866263937828773324526334321892
 7929250312741837331511829643632683169694074912332726993582394725302853411901337696207186358524323117172520907433878952968176465
 9486937364148093931718552300016332142708943190856638524388888569011747617956915519539025796115901484762122047712200094207683584
@@ -8217,17 +8192,22 @@ function randomCharacters(length) {
 1523246308282008538061408160202517775966824053244715248653671495274650673682535042749033828795099010214859776685551489176975506
 5811209762314534687747281829159103097186141033482266881873367741901377849867980657673782571505747169485443159028925476795003998
 9634367858634565656906133482371306765239555613722480562207025106068336976469898723556668691361827599343403798798405762012284113`;
-  const randomIndex = Math.floor(Math.random() * (longString.length - length));
-  const randomChars = longString.substr(randomIndex, length);
-  return "This is from node.mjs:" + randomChars;
+
+	const randomIndex = Math.floor(Math.random() * (longString.length - length));
+	const randomChars = longString.substr(randomIndex, length);
+	return msg + randomChars;
 }
 
-// src/index.js
 console.log("startup log");
-var src_default = {
-  async fetch(request) {
-    console.log("request log");
-    const result = randomCharacters(8);
-    return new Response(`${result}`);
-  }
+
+var index = {
+	async fetch(request) {
+		console.log("request log");
+
+		const result = randomCharacters(8);
+
+		return new Response(`${result}`);
+	},
 };
+
+export { index as default };

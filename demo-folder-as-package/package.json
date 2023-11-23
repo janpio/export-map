@@ -10,7 +10,8 @@
     "build-node-webpack": "npx webpack -c webpack.node.config.js",
     "build-worker-webpack": "npx webpack -c webpack.worker.config.js",
     "build-node-rollup": "npx rollup -c rollup.node.config.js",
-    "build-worker-rollup": "npx rollup -c rollup.worker.config.js"
+    "build-worker-rollup": "npx rollup -c rollup.worker.config.js",
+    "build-all": "npm run build-node-esbuild && npm run build-cloudflare && npm run build-node-webpack && npm run build-worker-webpack && npm run build-node-rollup && npm run build-worker-rollup"
   },
   "keywords": [],
   "author": "",

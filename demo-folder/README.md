@@ -17,7 +17,7 @@ npm run build-worker-rollup
 
 ## Result
 
-- Build succeeds, and includes only content of `node.js` 🔴 in bundle for `*-worker-*` and `*-cloudflare` builds
+- Build succeeds, but includes content of `main.js` 🔴 in bundle for `*-worker-*` and `*-cloudflare` builds
+- Build succeeds, but includes content of `main.js` ✅ in bundle for `*-node-*` builds
 
-- Build succeeds, and includes only content of `node.js` ✅ in bundle for `*-node-*` builds
-
+(Without `main` entry in `package.json` it would fail and not find the package)
